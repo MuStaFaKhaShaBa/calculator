@@ -4,10 +4,11 @@ let Series = [],
     lastAns = 0;
 
 function clicked(num) {
-    if (flag) {
+    if (flag || inpField.value == 'MusTaFa KhaShaBa') {
         inpField.value = " ";
         flag = false;
     }
+    inpField.style.textAlign = 'left';
     inpField.value += num;
     Series = [];
 }
