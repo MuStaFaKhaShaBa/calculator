@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --mainColor: #333;
+    --secColor: rgb(207, 204, 204);
+}
+body {
+    background-color: var(--mainColor, --secColor);
+    height: 100vh;
+}
+.Flex-Center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Form {
+    padding: 40px 20px 10px;
+    background-color: var(--mainColor);
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgb(0, 0, 0, 0.25), 10px 10px 70px rgb(0, 0, 0, 0.25),
+        inset -5px -5px 15px rgb(0, 0, 0, 0.5), inset 5px 5px 15px rgb(0, 0, 0, 0.5);
+}
+
+.Form input[type="text"] {
+    background-color: #a7af7c;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.Form ul {
+    list-style: none;
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(5, auto);
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.Form ul li {
+    position: relative;
+    height: 80px;
+    width: auto;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #2d2d2d, #4d4d4d);
+    color: white;
+    box-shadow: inset 0 -8px 8px rgb(0, 0, 0, 0.25), inset -8px 0 8px rgb(0, 0, 0, 0.25);
+    border: 1px solid black;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+.Form ul li::before {
+    content: attr(data-attr);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    right: 13px;
+    bottom: 12px;
+    background-image: linear-gradient(90deg, #2f2f2f, #3f3f3f);
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgb(0, 0, 0, 0.1), 10px 5px 10px rgb(0, 0, 0, 0.25);
+    border-bottom: 1px solid #0001;
+    border-left: 1px solid #0004;
+    border-top: 1px solid #0009;
+    font-size: 20px;
+}
+.Form ul li[data-attr="C"] {
+    background: #f00;
+    grid-area: span 1 / span 2;
+}
+.Form ul li[data-attr="C"]::before {
+    background-image: linear-gradient(90deg, #d20000, #ffffff5c);
+    box-shadow: 0 0 0 0 white;
+    border-bottom: 1px solid #fff4;
+    border-left: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.Form ul li[data-attr="DEL"] {
+    background: rgba(245, 165, 16, 0.418);
+    grid-area: span 1 / span 2;
+}
+.Form ul li[data-attr="DEL"]::before {
+    background-image: linear-gradient(90deg, rgba(245, 165, 16, 0.418), #ffffff5c);
+    box-shadow: 0 0 0 0 white;
+    border-bottom: 1px solid #fff4;
+    border-left: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.Form ul li[data-attr="OF"] {
+    background: rgba(245, 165, 16, 0.418);
+}
+.Form ul li[data-attr="OF"]::before {
+    background-image: linear-gradient(90deg, rgba(245, 165, 16, 0.418), #ffffff5c);
+    box-shadow: 0 0 0 0 white;
+    border-bottom: 1px solid #fff4;
+    border-left: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+
+.Form ul li[data-attr="+"] {
+    grid-area: span 2 / span 1;
+    height: 170px;
+}
+
+.Form ul li[data-attr="="] {
+    background: #2196f3;
+}
+.Form ul li[data-attr="="]::before {
+    background-image: linear-gradient(90deg, #1479c9, #ffffff5c);
+    box-shadow: 0 0 0 0 white;
+    border-bottom: 1px solid #fff4;
+    border-left: 1px solid #fff4;
+    border-top: 1px solid #fff4;
+}
+.Form ul li:hover {
+    transform: translateZ(-5px);
+}

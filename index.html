@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="Flex-Center">
+    <form class="Form">
+        <input type="text" class="inpField" disabled placeholder="MusTaFa KhaShaBa">
+        <ul>
+            <li class="Clr" onclick="click_Clr()" data-attr="C"></li>
+            <li onclick="clicked('(')" data-attr="("></li>
+            <li onclick="clicked(')')" data-attr=")"></li>
+            
+            <li onclick="clicked('')" ></li>
+            <li onclick="clicked('')"  ></li>
+            <li onclick="clicked('*')" data-attr="*"></li>
+            <li onclick="clicked('/')" data-attr="/"></li>
+            
+            <li onclick="clicked('^')" data-attr="^"></li>
+            <li onclick="Dele()"       data-attr="DEL"></li>
+            <li onclick="click_ShutDown()"data-attr="OF"></li>
+            
+            <li onclick="clicked(7)"   data-attr="7"></li>
+            <li onclick="clicked(8)"   data-attr="8"></li>
+            <li onclick="clicked(9)"   data-attr="9"></li>
+            
+            <li onclick="clicked('-')" data-attr="-"></li>
+            <li onclick="clicked(4)"   data-attr="4"></li>
+            <li onclick="clicked(5)"   data-attr="5"></li>
+            <li onclick="clicked(6)"   data-attr="6"></li>
+
+            <li onclick="clicked('+')" data-attr="+"></li>
+            <li onclick="clicked(1)"   data-attr="1"></li>
+            <li onclick="clicked(2)"   data-attr="2"></li>
+            <li onclick="clicked(3)"   data-attr="3"></li>
+            <li onclick="clicked(0)"   data-attr="0"></li>
+            
+            <li onclick="clicked('.')" data-attr="."></li>
+            <li onclick="clicked('Ans')"  data-attr="Ans"></li>
+            <li onclick="Calc()"       data-attr="="></li>
+        </ul>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
