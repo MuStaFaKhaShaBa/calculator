@@ -14,7 +14,9 @@ function clicked(num) {
 }
 
 function click_ShutDown() {
-    inpField.value = "MusTaFa KhaShaBa";
+    inpField.value ='';
+    inpField.style.textAlign = 'center';
+
 }
 
 function click_Clr() {
@@ -161,7 +163,7 @@ function Calc_PostFix(Exp) {
                     oper = +sNum / +fNum;
                     break;
                 case "^":
-                    oper = +sNum ^ +fNum;
+                    oper = (+sNum ) ** (+fNum);
                     break;
                 default:
                     break;
